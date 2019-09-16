@@ -9,6 +9,8 @@ config/secrets/*
 !config/secrets/.gitkeep
 config/peatio/seed/*
 !config/peatio/seed/.gitkeep
+config/barong/*
+!config/barong/.gitkeep
 vendor/
 !vendor/.gitkeep
 .terraform/
