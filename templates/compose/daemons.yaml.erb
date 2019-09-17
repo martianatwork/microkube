@@ -11,15 +11,15 @@ x-daemon: &peatio-daemon
 services:
   withdraw_audit:
     << : *peatio-daemon
-    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/withdraw_audit.rb"
+    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/daemons.rb withdraw_audit"
 
   blockchain:
     << : *peatio-daemon
-    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/blockchain.rb"
+    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/daemons.rb blockchain"
 
   global_state:
     << : *peatio-daemon
-    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/global_state.rb"
+    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/daemons.rb global_state"
 
   deposit_collection:
     << : *peatio-daemon
@@ -35,7 +35,7 @@ services:
 
   slave_book:
     << : *peatio-daemon
-    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/amqp_daemon.rb slave_book"
+    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/daemons.rb slave_book"
 
   market_ticker:
     << : *peatio-daemon
@@ -67,7 +67,7 @@ services:
 
   k:
     << : *peatio-daemon
-    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/k.rb"
+    command: bash -c "bin/link_config && bundle exec ruby lib/daemons/daemons.rb k"
 
   ranger:
     image: "<%= @config['images']['peatio'] %>"
