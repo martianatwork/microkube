@@ -19,6 +19,9 @@ images:
   tower: rubykube/tower:2.2.8
   postmaster: quay.io/openware/postmaster:0.0.3
   arke: rubykube/arke:0.1.9
+build:
+  peatio: rubykube/peatio:2.2.29
+  barong: rubykube/barong:2.2.25
 vendor:
   frontend: https://github.com/rubykube/mikroapp.git
 storage:
@@ -61,6 +64,9 @@ barong:
   secret_key_base: "64"
 
 sendgrid_api_key: changeme
+gems:
+  peatio:
+    - ''
 arke:
   strategy:
     type: copy

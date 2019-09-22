@@ -11,6 +11,7 @@ config/peatio/seed/*
 !config/peatio/seed/.gitkeep
 config/barong/*
 !config/barong/.gitkeep
+!config/app.yml
 compose/*
 !compose/build/peatio/.gitkeep
 !compose/build/.gitkeep
@@ -20,3 +21,4 @@ vendor/
 *.tfvars
 terraform.tfstate*
 !data/geth/.gitkeep
+.idea/
