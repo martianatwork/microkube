@@ -1,7 +1,14 @@
 FROM <%= @config['images']['peatio'] %>
 
+USER root
+WORKDIR $APP_HOME
+
 # Copy Gemfile.plugin for installing plugins.
 COPY Gemfile.plugin $APP_HOME
 
 # Install plugins.
 RUN bundle install --path /opt/vendor/bundle
+
+RUN chown -R app:app $APP_HOME
+
+USER app
