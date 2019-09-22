@@ -2,6 +2,7 @@ version: '3.6'
 
 services:
   peatio:
+    build: ./build/peatio
     image: "<%= @config['images']['peatio'] %>"
     env_file:
       - ../config/peatio.env

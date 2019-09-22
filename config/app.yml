@@ -45,7 +45,7 @@ database:
   port: 3306
 redis:
   host: "redis"
-  port: "6378"
+  port: "6379"
 vault:
   host: "vault"
   port: "8200"
