@@ -11,6 +11,9 @@ config/peatio/seed/*
 !config/peatio/seed/.gitkeep
 config/barong/*
 !config/barong/.gitkeep
+compose/*
+!compose/build/peatio/.gitkeep
+!compose/build/.gitkeep
 vendor/
 !vendor/.gitkeep
 .terraform/
